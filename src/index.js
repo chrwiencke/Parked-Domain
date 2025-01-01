@@ -9,7 +9,7 @@ export default {
 		const domain = parse(url.host).domain;
 
 		const html = `
-		<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,6 +33,16 @@ export default {
         border-radius: 8px;
         background: rgba(255, 255, 255, 0.8);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+      .footer {
+        font-size: 0.875rem;
+        color: #718096;
+        position: fixed;
+        bottom: 1rem;
+        left: 0;
+        right: 0;
+        text-align: center;
       }
       h1 {
         margin: 0 0 1rem 0;
@@ -56,8 +66,12 @@ export default {
         <h1>The domain ${domain} is parked</h1>
         <p>Want to contact the owner? <a href="mailto:contact@${domain}">contact@${domain}</a></p>
     </div>
+    <div class="footer">
+        Hosted by <a href="https://pludo.org">Pludo</a>
+    </div>
 </body>
-</html>`;
+</html>
+`;
 
 		return new Response(html, {
 			headers: {
