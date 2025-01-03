@@ -63,7 +63,7 @@ export default {
 </head>
 <body>
     <div class="container">
-        <h1>The domain ${domain} is parked</h1>
+        <h1>The ${domain} domain is parked</h1>
         <p>Want to contact the owner? <a href="mailto:contact@${domain}">contact@${domain}</a></p>
     </div>
     <div class="footer">
